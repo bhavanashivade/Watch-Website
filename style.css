@@ -239,9 +239,154 @@ section {
     margin-left: 9px;
 }
 
+.feature_grid {
+
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+
+}
 
 
 
+
+.feature_card {
+
+    position: relative;
+    isolation: isolate;
+    height: fit-content;
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+
+}
+
+/* 
+.feature_card:hover {
+
+    box-shadow: 5px 40px rgba(0, 0, 0, 0.2);
+
+} */
+
+.feature_card span {
+
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: top right;
+    display: inline;
+    padding: 5px 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--primary-color);
+
+}
+
+
+.feature_card img {
+
+    width: fit-content;
+    height: 100%;
+    max-height: 250px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+
+
+}
+
+
+.feature_card h4 {
+
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+
+}
+
+
+.feature_card p {
+
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+
+}
+
+
+.feature_card .btn {
+
+    display: none;
+
+}
+
+.feature_card:hover .btn {
+
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
+
+.about {
+
+    padding: 1rem 7%;
+
+    background: var(--about-sec);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (width > 540px) {
+
+    .feature_grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (width > 768px) {
+
+
+    .feature_grid {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+
+}
+
+
+
+@media (width > 1024px) {
+
+
+    .feature_grid {
+
+        gap: 2rem;
+    }
+}
 
 
 @media(max-width:1610px) {
@@ -263,10 +408,7 @@ section {
 
 
 
-
 }
-
-
 
 
 
@@ -279,11 +421,40 @@ section {
     }
 
 
+    :root {
 
+        --h1-font: 4.8rem;
+        --h2-font: 2.8rem;
+        --p-font: 15px;
+
+    }
 
 
 }
 
+
+@media(max-width:1170px) {
+
+
+
+
+    header {
+
+        padding: 10px 4%;
+
+    }
+
+
+
+    section {
+
+        padding: 60px 4% 70px;
+
+    }
+
+
+
+}
 
 
 @media(max-width:1050px) {
@@ -322,10 +493,15 @@ section {
 
     }
 
-
     .navlist.open {
 
         left: 0;
+    }
+
+    :root {
+
+        --h1-font: 4.5rem;
+        --h2-font: 2.6rem;
     }
 
 
@@ -340,6 +516,18 @@ section {
 
 @media(max-width:530px) {
 
+
+    :root {
+
+        --h1-font: 3.5rem;
+        --h2-font: 2.2rem;
+
+    }
+
+    .btn {
+
+        padding: 12px 20px;
+    }
 
 
     .nav-right a {
